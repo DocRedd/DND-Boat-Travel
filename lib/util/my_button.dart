@@ -16,7 +16,7 @@ class MyButton extends StatelessWidget {
       onPressed: onPressed,
       child: Text(text),
       style: ElevatedButton.styleFrom(textStyle: const TextStyle(fontSize: 20),
-          backgroundColor: Colors.yellow,
+          backgroundColor: Colors.blue,
           //foregroundColor: Colors.red,
           shape: StadiumBorder()),
     );

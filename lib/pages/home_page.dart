@@ -22,11 +22,11 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
 
-    //if this is the 1st time ever opening the app the create defaul data
-    if (_mybox.get("TODOLIST") == null){
+    //if this is the 1st time ever opening the app the create default data
+    if (_mybox.get("BOATSTATS") == null){
       db.createInitialData();
     } else {
-      // there already exosts data
+      // there already exists data
       db.loadData();
     }
 
@@ -77,14 +77,14 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.yellow[200],
+      backgroundColor: Colors.blue[200],
       appBar: AppBar(
-        backgroundColor: Colors.yellow,
-        title: Center(child: Text("To Do")),
+        backgroundColor: Colors.blue,
+        title: Center(child: Text("Boat Travelling")),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: createNewTask,
-        backgroundColor: Colors.yellow,
+        backgroundColor: Colors.blue,
 
         // ignore: prefer_const_constructors
         child: Icon(Icons.add),

@@ -26,7 +26,7 @@ class ToDoTile extends StatelessWidget {
             SlidableAction(
               onPressed: deleteFunction,
               icon: Icons.delete,
-              backgroundColor: Colors.red,
+              backgroundColor: Colors.green,
               borderRadius: BorderRadius.circular(12),
             ),
           ],
@@ -34,7 +34,7 @@ class ToDoTile extends StatelessWidget {
         child: Container(
           padding: EdgeInsets.all(24),
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(12), color: Colors.yellow),
+              borderRadius: BorderRadius.circular(12), color: Colors.blue),
           child: Row(
             children: [
               //Checkbox
