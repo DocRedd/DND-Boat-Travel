@@ -2,10 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:dndboats/util/my_button.dart';
 
 class DialogBox extends StatelessWidget {
-  final controller;
+  final boatSpeed;
+  final boatDistance;
+  final boatHour;
   VoidCallback onSave;
   VoidCallback onCancel;
-  DialogBox({super.key, required this.controller, required this.onSave,required this.onCancel});
+  DialogBox({super.key,
+    required this.boatSpeed,
+    required this.boatDistance,
+    required this.boatHour,
+    required this.onSave,
+    required this.onCancel});
 
 
 
@@ -19,18 +26,18 @@ class DialogBox extends StatelessWidget {
       content: Container(
         height: MediaQuery.of(context).size.height*0.30,
         width: MediaQuery.of(context).size.width*0.10,
-        child: Column(children: [
-
+        child: Column(
+          children: [
           TextField(
-            controller: controller,
+            controller: boatSpeed,
             decoration: InputDecoration(border: OutlineInputBorder(),hintText: "Boat Speed (1 Tile per Day)"),
           ),
           TextField(
-            controller: controller,
+            controller: boatDistance,
             decoration: InputDecoration(border: OutlineInputBorder(),hintText: "Distance to travel (1 tile)"),
           ),
           TextField(
-            controller: controller,
+            controller: boatHour,
             decoration: InputDecoration(border: OutlineInputBorder(),hintText: "Start Time (24hrclock int)"),
           ),
           const SizedBox(),

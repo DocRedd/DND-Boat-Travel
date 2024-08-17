@@ -1,15 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 
-class ToDoTile extends StatelessWidget {
-  final String taskName;
+class SlideTile extends StatelessWidget {
+  final String boatSpeed;
+  final String boatDistance;
+  final String boatHour;
+  final String arrivalTime;
   final bool taskCompleted;
   Function(bool?)? onChanged;
   Function(BuildContext)? deleteFunction;
 
-  ToDoTile(
+  SlideTile(
       {super.key,
-        required this.taskName,
+        required this.boatSpeed,
+        required this.boatDistance,
+        required this.boatHour,
+        required this.arrivalTime,
         required this.taskCompleted,
         required this.onChanged,
         required this.deleteFunction,
@@ -44,8 +50,33 @@ class ToDoTile extends StatelessWidget {
                 activeColor: Colors.black,
               ),
               //Taskname
+              Text("BoatSpeed: "),
               Text(
-                taskName,
+                boatSpeed + " | ",
+                style: TextStyle(
+                    decoration: taskCompleted
+                        ? TextDecoration.lineThrough
+                        : TextDecoration.none),
+              ),
+              Text("Distance: "),
+              Text(
+                boatDistance + " | ",
+                style: TextStyle(
+                    decoration: taskCompleted
+                        ? TextDecoration.lineThrough
+                        : TextDecoration.none),
+              ),
+              Text("StartTime: "),
+              Text(
+                boatHour + " | ",
+                style: TextStyle(
+                    decoration: taskCompleted
+                        ? TextDecoration.lineThrough
+                        : TextDecoration.none),
+              ),
+              Text("ArrivalTime: "),
+              Text(
+                arrivalTime + "  ",
                 style: TextStyle(
                     decoration: taskCompleted
                         ? TextDecoration.lineThrough
